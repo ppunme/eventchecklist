@@ -1,0 +1,17 @@
+body {
+  background-color: #d9d3cd !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+//home
+.home {
+  .card {
+    width: 18rem;
+    box-shadow: 5px 8px 15px gray;
+    border-radius: 1rem;
+  }
+
+  .card-header {
+    background-color: #c6d8d8;
+  }
+}

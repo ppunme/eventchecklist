@@ -1,17 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;600;700&display=swap');
+
+$bg-color: #e9e6e4;
+$my-green: #c0cb79;
+$my-orange: #f89059;
+$light-blue: #87b4ca;
+$my-yellow: #fecf63;
+$my-bluegreen: #429ba6;
+$title-font: 'Roboto Condensed', sans-serif;
+$primary-font: 'Roboto', sans-serif;
+$brand-font: 'Roboto Slab', serif;
+
 body {
-  background-color: #d9d3cd !important;
-  font-family: 'Open Sans', sans-serif !important;
+  background-color: $bg-color !important;
+  font-family: $primary-font !important;
 }
 
-//home
-.home {
+.btn-black {
+  background-color: $my-orange !important;
+  border-radius: 20rem !important;
+  color: white !important;
+}
+
+.title {
+  font-family: $title-font;
+}
+
+.btn-add {
+  background-color: $my-bluegreen !important;
+  border-radius: 20rem !important;
+  padding: 0.7rem 1.5rem !important;
+  box-shadow: 2px 3px 10px gray;
+  font-family: $title-font;
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem !important;
+  color: white !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+.text-brand {
+  font-family: $brand-font;
+  font-size: 1.6rem !important;
+}
+
+.text-brand-back {
+  color: $my-bluegreen;
+}
+
+//dashboard
+.dashboard {
+  .title {
+    letter-spacing: 0.2rem;
+  }
+
+  .add-event-btn {
+    padding-bottom: 3rem;
+  }
+}
+
+//events
+.events {
   .card {
-    width: 18rem;
+    height: 14rem;
+    width: 14rem;
     box-shadow: 5px 8px 15px gray;
-    border-radius: 1rem;
+    border-radius: 0;
+    border: none;
+    margin-bottom: 3rem;
   }
 
   .card-header {
-    background-color: #c6d8d8;
+    background-color: $my-yellow;
+    border-radius: 0 !important;
+    border: none;
+    font-family: $title-font;
+    color: black;
+  }
+
+  .col-3 {
+    padding: 0px;
+  }
+
+  .btn-delete {
+    color: #bb0000;
+    border-radius: 50%;
+    border: 2px solid #e6e6e6;
+    display: block;
+    margin-top: 1.7rem;
+    box-shadow: 1px 1px 5px gray;
+    display: none;
+  }
+
+  .show-button:hover .btn-delete {
+    display: block !important;
+  }
+
+  .card:hover .card-header {
+    background-color: #f8c059;
+  }
+
+  .btn-delete:hover {
+    background-color: lightgrey;
+  }
+}
+
+//add event
+.add-event {
+  padding-top: 8rem;
+
+  .card {
+    width: 32rem;
+    box-shadow: 5px 8px 15px gray;
+  }
+
+  .add-box {
+    padding: 2rem 4rem;
+  }
+
+  .title {
+    font-weight: 300;
+  }
+
+  .label {
+    font-size: 1.1rem;
+  }
+
+  .btn-back {
+    color: gray;
+    font-family: $title-font;
+    font-weight: 300;
+  }
+
+  .btn-back:hover {
+    color: black;
+  }
+}
+
+//event details
+.details {
+  padding-top: 5rem;
+
+  .card {
+    width: 30rem;
+    padding: 2rem;
+  }
+}
+
+//add food
+.add-food {
+  padding-top: 8rem;
+
+  .card {
+    width: 30rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .dashboard {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .dashboard {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .dashboard {
+    .add-event-btn {
+      padding-bottom: 1.5rem;
+    }
+  }
+  .events {
+    .card {
+      height: 10rem !important;
+      width: 10rem !important;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-header {
+      font-size: 1.2rem;
+    }
+
+    .card-body {
+      padding: 1rem;
+      font-size: 0.8rem;
+    }
   }
 }
